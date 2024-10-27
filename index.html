@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魏勤谨的个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        #container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+        header {
+            background-color: #e9ecef;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        header img {
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #5a6268;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #e9ecef;
+            color: #333;
+            position: relative;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function toggleLanguage() {
+            const htmlTag = document.documentElement;
+            if (htmlTag.lang === "en") {
+                htmlTag.lang = "zh-CN";
+                document.getElementById("toggleButton").innerText = "Switch to English";
+                document.getElementById("headerName").innerText = "魏勤谨";
+                document.getElementById("personalInfo").innerHTML = `
+                    <h2>个人信息</h2>
+                    <p>邮箱: <a href="mailto:martina@mail.ustc.edu.cn">martina@mail.ustc.edu.cn</a></p>
+                    <p>学校: 中国科学技术大学</p>
+                    <p>本科学院: 四川大学建筑与环境学院 (2017-2021)</p>
+                    <p>硕士学院: 环境科学与光电技术学院 (2021-2024)</p>
+                `;
+                document.getElementById("researchDirection").innerHTML = `
+                    <h2>研究方向</h2>
+                    <ul>
+                        <li>环境科学与工程</li>
+                    </ul>
+                `;
+            } else {
+                htmlTag.lang = "en";
+                document.getElementById("toggleButton").innerText = "切换到中文";
+                document.getElementById("headerName").innerText = "Qinjin Wei";
+                document.getElementById("personalInfo").innerHTML = `
+                    <h2>Personal Information</h2>
+                    <p>Email: <a href="mailto:martina@mail.ustc.edu.cn">martina@mail.ustc.edu.cn</a></p>
+                    <p>University: University of Science and Technology of China</p>
+                    <p>Bachelor's College: Sichuan University, College of Architecture and Environment (2017-2021)</p>
+                    <p>Master's College: School of Environmental Science and Optoelectronics Technology (2021-2024)</p>
+                `;
+                document.getElementById("researchDirection").innerHTML = `
+                    <h2>Research Directions</h2>
+                    <ul>
+                        <li>Environmental Science and Engineering</li>
+                    </ul>
+                `;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <button id="toggleButton" onclick="toggleLanguage()">切换到中文</button>
+        <header>
+            <h1 id="headerName">Qinjin Wei</h1>
+            <img src="photo.jpg" alt="Qinjin Wei's Photo" width="200">
+        </header>
+        <section id="personalInfo">
+            <h2>Personal Information</h2>
+            <p>Email: <a href="mailto:martina@mail.ustc.edu.cn">martina@mail.ustc.edu.cn</a></p>
+            <p>University: University of Science and Technology of China</p>
+            <p>Bachelor's College: Sichuan University, College of Architecture and Environment (2017-2021)</p>
+            <p>Master's College: School of Environmental Science and Optoelectronics Technology (2021-2024)</p>
+        </section>
+        <section id="researchDirection">
+            <h2>Research Directions</h2>
+            <ul>
+                <li>Environmental Science and Engineering</li>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2024 Qinjin Wei. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
